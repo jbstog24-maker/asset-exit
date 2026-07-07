@@ -1,11 +1,12 @@
-# Asset Exit Network Updated Files
+# Asset Exit Network - Balanced Hero Update
 
-Upload these three files to the root of the GitHub repository connected to Vercel:
-
+Upload these files to the root of your GitHub repo:
 - index.html
 - logo.png
-- hero-image.png
+- hero-bg.png
 
-The HTML expects both image files to sit in the same folder as index.html.
-
-Vercel should redeploy automatically after the GitHub commit.
+Changes:
+- Hero content moved upward.
+- Hero background stays as the full hero background image.
+- Added a glass-style process card under the CTA buttons to balance the left side.
+- Good fit examples card remains below the hero, pulled up less aggressively.

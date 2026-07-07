@@ -109,22 +109,22 @@
       background:
         linear-gradient(
           90deg,
-          rgba(15, 23, 42, 0.98) 0%,
-          rgba(15, 23, 42, 0.92) 34%,
-          rgba(15, 23, 42, 0.60) 62%,
-          rgba(15, 23, 42, 0.35) 100%
+          rgba(15, 23, 42, 0.99) 0%,
+          rgba(15, 23, 42, 0.94) 32%,
+          rgba(15, 23, 42, 0.70) 55%,
+          rgba(15, 23, 42, 0.42) 100%
         ),
         url("hero-bg.png");
       background-size: cover;
       background-position: center right;
       background-repeat: no-repeat;
       color: var(--white);
-      padding: 110px 0 130px;
+      padding: 70px 0 115px;
       position: relative;
       overflow: hidden;
-      min-height: 720px;
+      min-height: 640px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .hero::after {
@@ -134,9 +134,10 @@
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr;
-      max-width: 690px;
+      max-width: 720px;
       position: relative;
       z-index: 1;
+      margin-top: 22px;
     }
 
     .badge {
@@ -160,10 +161,11 @@
     }
 
     h1 {
-      font-size: clamp(2.35rem, 5vw, 4.85rem);
-      line-height: 0.96;
+      font-size: clamp(2.65rem, 4.5vw, 4.25rem);
+      line-height: 0.98;
       letter-spacing: -0.07em;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      max-width: 670px;
     }
 
     .hero p {
@@ -483,6 +485,45 @@
     }
 
 
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 640px;
+      margin-top: 26px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.62);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-proof div {
+      border-right: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 6px 12px;
+    }
+
+    .hero-proof div:last-child {
+      border-right: 0;
+    }
+
+    .hero-proof strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.95rem;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .hero-proof span {
+      display: block;
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      line-height: 1.3;
+    }
+
     .fit-section {
       background: #f8fafc;
       padding: 0 0 30px;
@@ -492,7 +533,7 @@
 
     .fit-section .hero-card {
       max-width: 860px;
-      margin: -90px auto 0;
+      margin: -58px auto 0;
       position: relative;
       z-index: 5;
     }
@@ -547,7 +588,7 @@
       .hero {
         min-height: auto;
         padding: 72px 0 92px;
-        background-position: 68% center;
+        background-position: 62% center;
       }
 
       .fit-section .hero-card {
@@ -622,6 +663,20 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#submit">Submit Equipment for Review</a>
             <a class="btn btn-secondary" href="#how">How It Works</a>
+          </div>
+          <div class="hero-proof" aria-label="Asset Exit Network process highlights">
+            <div>
+              <strong>Find value</strong>
+              <span>Trucks, trailers, equipment, and bulk lots reviewed.</span>
+            </div>
+            <div>
+              <strong>Package the asset</strong>
+              <span>Photos, condition, title status, and sale timeline.</span>
+            </div>
+            <div>
+              <strong>Exit smarter</strong>
+              <span>Review paths for resale, consignment, or buyer network.</span>
+            </div>
           </div>
         </div>
 
