@@ -45,14 +45,17 @@
     }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(1360px, 92%);
       margin: 0 auto;
     }
 
     header {
-      background: linear-gradient(135deg, var(--bg), var(--bg-2));
+      background: rgba(15, 23, 42, 0.96);
       color: var(--white);
-      padding: 20px 0;
+      padding: 18px 0;
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .nav {
@@ -109,22 +112,23 @@
       background:
         linear-gradient(
           90deg,
-          rgba(15, 23, 42, 0.99) 0%,
-          rgba(15, 23, 42, 0.94) 32%,
-          rgba(15, 23, 42, 0.70) 55%,
-          rgba(15, 23, 42, 0.42) 100%
+          rgba(15, 23, 42, 1) 0%,
+          rgba(15, 23, 42, 0.98) 28%,
+          rgba(15, 23, 42, 0.82) 46%,
+          rgba(15, 23, 42, 0.46) 68%,
+          rgba(15, 23, 42, 0.26) 100%
         ),
         url("hero-bg.png");
       background-size: cover;
-      background-position: center right;
+      background-position: 76% center;
       background-repeat: no-repeat;
       color: var(--white);
-      padding: 70px 0 115px;
+      padding: 74px 0 96px;
       position: relative;
       overflow: hidden;
-      min-height: 640px;
+      min-height: 660px;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
     }
 
     .hero::after {
@@ -132,12 +136,11 @@
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      max-width: 720px;
+      display: block;
+      max-width: 650px;
       position: relative;
-      z-index: 1;
-      margin-top: 22px;
+      z-index: 2;
+      margin: 0;
     }
 
     .badge {
@@ -161,18 +164,19 @@
     }
 
     h1 {
-      font-size: clamp(2.65rem, 4.5vw, 4.25rem);
-      line-height: 0.98;
-      letter-spacing: -0.07em;
-      margin-bottom: 22px;
-      max-width: 670px;
+      font-size: clamp(2.75rem, 4.6vw, 4.85rem);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+      margin-bottom: 24px;
+      max-width: 650px;
     }
 
     .hero p {
-      color: #cbd5e1;
-      font-size: 1.15rem;
-      max-width: 650px;
-      margin-bottom: 30px;
+      color: #d8e0ec;
+      font-size: 1.12rem;
+      max-width: 600px;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
     }
 
     .hero-actions {
@@ -484,59 +488,64 @@
       background: #fbbf24;
     }
 
-
-
     .hero-proof {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
-      max-width: 640px;
+      max-width: 620px;
       margin-top: 26px;
-      padding: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 18px;
-      background: rgba(15, 23, 42, 0.62);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
     }
 
     .hero-proof div {
-      border-right: 1px solid rgba(255, 255, 255, 0.14);
-      padding: 6px 12px;
-    }
-
-    .hero-proof div:last-child {
-      border-right: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.58);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
     }
 
     .hero-proof strong {
-      display: block;
       color: var(--white);
-      font-size: 0.95rem;
-      line-height: 1.1;
-      margin-bottom: 4px;
+      font-size: 0.88rem;
+      line-height: 1;
+      white-space: nowrap;
     }
 
     .hero-proof span {
-      display: block;
       color: #cbd5e1;
       font-size: 0.82rem;
-      line-height: 1.3;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .hero-proof div::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.8);
+      flex: 0 0 auto;
     }
 
     .fit-section {
       background: #f8fafc;
-      padding: 0 0 30px;
+      padding: 0 0 34px;
       position: relative;
       z-index: 4;
     }
 
     .fit-section .hero-card {
-      max-width: 860px;
-      margin: -58px auto 0;
+      max-width: 900px;
+      margin: -48px auto 0;
       position: relative;
       z-index: 5;
     }
+
 
     .trust {
       background: #f1f5f9;
@@ -587,13 +596,31 @@
 
       .hero {
         min-height: auto;
-        padding: 72px 0 92px;
-        background-position: 62% center;
+        padding: 64px 0 88px;
+        background-position: 68% center;
+      }
+
+      .hero-grid {
+        max-width: 100%;
+      }
+
+      .hero-proof {
+        gap: 8px;
+      }
+
+      .hero-proof div {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-proof span {
+        white-space: normal;
       }
 
       .fit-section .hero-card {
-        margin-top: -55px;
+        margin-top: -36px;
       }
+
 
       .hero-grid,
       .lead-form-wrap {
@@ -665,18 +692,9 @@
             <a class="btn btn-secondary" href="#how">How It Works</a>
           </div>
           <div class="hero-proof" aria-label="Asset Exit Network process highlights">
-            <div>
-              <strong>Find value</strong>
-              <span>Trucks, trailers, equipment, and bulk lots reviewed.</span>
-            </div>
-            <div>
-              <strong>Package the asset</strong>
-              <span>Photos, condition, title status, and sale timeline.</span>
-            </div>
-            <div>
-              <strong>Exit smarter</strong>
-              <span>Review paths for resale, consignment, or buyer network.</span>
-            </div>
+            <div><strong>Free review</strong><span>No obligation</span></div>
+            <div><strong>Bulk lots</strong><span>One asset or many</span></div>
+            <div><strong>Fast follow-up</strong><span>Clear next steps</span></div>
           </div>
         </div>
 
@@ -830,7 +848,7 @@
              2. Replace the action URL below with your Formspree endpoint.
              3. Set the notification recipient inside Formspree to the company review email: leads@example.com
         -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form action="https://formspree.io/f/xwvdjowv" method="POST">
           <input type="hidden" name="_subject" value="New Equipment Lead Submission - Asset Exit Network" />
 
           <div class="form-grid">

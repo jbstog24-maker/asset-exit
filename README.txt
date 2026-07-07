@@ -1,12 +1,19 @@
-# Asset Exit Network - Balanced Hero Update
+# Asset Exit Network - Final Hero + Formspree Update
 
 Upload these files to the root of your GitHub repo:
 - index.html
 - logo.png
 - hero-bg.png
 
-Changes:
-- Hero content moved upward.
-- Hero background stays as the full hero background image.
-- Added a glass-style process card under the CTA buttons to balance the left side.
-- Good fit examples card remains below the hero, pulled up less aggressively.
+Updates included:
+- Professional hero layout fix
+- Hero image used as background
+- Left-side layout balanced with clean trust chips
+- Formspree endpoint connected:
+  https://formspree.io/f/xwvdjowv
+
+After upload:
+1. Commit to main.
+2. Wait for Vercel redeploy.
+3. Hard refresh the live page.
+4. Submit a test form.
