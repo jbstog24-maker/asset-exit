@@ -207,17 +207,49 @@
       background: rgba(255, 255, 255, 0.12);
     }
 
+    .hero-visual {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      min-height: 360px;
+      background: rgba(15, 23, 42, 0.45);
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.04), rgba(15, 23, 42, 0.28));
+      pointer-events: none;
+    }
+
     .hero-card {
-      background: var(--card);
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.93);
       color: var(--text);
       border-radius: var(--radius);
-      padding: 26px;
+      padding: 20px;
       box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
     }
 
     .hero-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 14px;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
     }
 
     .mini-list {
@@ -553,6 +585,19 @@
         padding: 52px 0 66px;
       }
 
+      .hero-visual,
+      .hero-visual img {
+        min-height: 260px;
+      }
+
+      .hero-card {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: -70px 14px 0;
+      }
+
       section {
         padding: 56px 0;
       }
@@ -593,24 +638,27 @@
           </div>
         </div>
 
-        <div class="hero-card">
-          <h3>Good fit examples</h3>
-          <p style="color:#64748b;">We review individual items and bulk lots.</p>
-          <ul class="mini-list">
-            <li>Fleet vehicles being retired or replaced</li>
-            <li>Farm equipment, tractors, and implements</li>
-            <li>Contractor equipment, trailers, and machines</li>
-            <li>Warehouse, shop, and business surplus assets</li>
-          </ul>
+        <div class="hero-visual">
+          <img src="hero-image.png" alt="Commercial truck, tractor, and construction equipment representing surplus assets for review" />
+          <div class="hero-card">
+            <h3>Good fit examples</h3>
+            <p style="color:#64748b;">We review individual items and bulk lots.</p>
+            <ul class="mini-list">
+              <li>Fleet vehicles being retired or replaced</li>
+              <li>Farm equipment, tractors, and implements</li>
+              <li>Contractor equipment, trailers, and machines</li>
+              <li>Warehouse, shop, and business surplus assets</li>
+            </ul>
 
-          <div class="stat-row">
-            <div class="stat">
-              <strong>192+</strong>
-              <span>Items accepted for review</span>
-            </div>
-            <div class="stat">
-              <strong>Free</strong>
-              <span>No-obligation submission</span>
+            <div class="stat-row">
+              <div class="stat">
+                <strong>192+</strong>
+                <span>Items accepted for review</span>
+              </div>
+              <div class="stat">
+                <strong>Free</strong>
+                <span>No-obligation submission</span>
+              </div>
             </div>
           </div>
         </div>
@@ -736,7 +784,7 @@
              2. Replace the action URL below with your Formspree endpoint.
              3. Set the notification recipient inside Formspree to the company review email: leads@example.com
         -->
-        <form action="https://formspree.io/f/xwvdjowv" method="POST">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <input type="hidden" name="_subject" value="New Equipment Lead Submission - Asset Exit Network" />
 
           <div class="form-grid">
