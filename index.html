@@ -106,29 +106,35 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--bg), var(--bg-2));
+      background:
+        linear-gradient(
+          90deg,
+          rgba(15, 23, 42, 0.98) 0%,
+          rgba(15, 23, 42, 0.92) 34%,
+          rgba(15, 23, 42, 0.60) 62%,
+          rgba(15, 23, 42, 0.35) 100%
+        ),
+        url("hero-bg.png");
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
       color: var(--white);
-      padding: 72px 0 92px;
+      padding: 110px 0 130px;
       position: relative;
       overflow: hidden;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
     }
 
     .hero::after {
-      content: "";
-      position: absolute;
-      width: 440px;
-      height: 440px;
-      right: -140px;
-      top: 80px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.24), transparent 65%);
-      border-radius: 999px;
+      display: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 44px;
-      align-items: center;
+      grid-template-columns: 1fr;
+      max-width: 690px;
       position: relative;
       z-index: 1;
     }
@@ -207,41 +213,17 @@
       background: rgba(255, 255, 255, 0.12);
     }
 
-    .hero-right {
-      display: grid;
-      gap: 18px;
-    }
-
-    .hero-visual {
-      position: relative;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      min-height: 300px;
-      background: rgba(15, 23, 42, 0.45);
-    }
-
-    .hero-visual img {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      object-fit: cover;
-      display: block;
-    }
-
     .hero-card {
-      background: rgba(255, 255, 255, 0.96);
+      background: var(--card);
       color: var(--text);
       border-radius: var(--radius);
-      padding: 22px;
+      padding: 26px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(226, 232, 240, 0.9);
     }
 
     .hero-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 8px;
+      font-size: 1.2rem;
+      margin-bottom: 14px;
     }
 
     .mini-list {
@@ -500,6 +482,21 @@
       background: #fbbf24;
     }
 
+
+    .fit-section {
+      background: #f8fafc;
+      padding: 0 0 30px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .fit-section .hero-card {
+      max-width: 860px;
+      margin: -90px auto 0;
+      position: relative;
+      z-index: 5;
+    }
+
     .trust {
       background: #f1f5f9;
       border-top: 1px solid var(--line);
@@ -546,6 +543,17 @@
     }
 
     @media (max-width: 900px) {
+
+      .hero {
+        min-height: auto;
+        padding: 72px 0 92px;
+        background-position: 68% center;
+      }
+
+      .fit-section .hero-card {
+        margin-top: -55px;
+      }
+
       .hero-grid,
       .lead-form-wrap {
         grid-template-columns: 1fr;
@@ -575,19 +583,6 @@
 
       .hero {
         padding: 52px 0 66px;
-      }
-
-      .hero-visual,
-      .hero-visual img {
-        min-height: 260px;
-      }
-
-      .hero-card {
-        position: relative;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        margin: -70px 14px 0;
       }
 
       section {
@@ -630,30 +625,31 @@
           </div>
         </div>
 
-        <div class="hero-right">
-          <div class="hero-visual">
-            <img src="hero-image.png" alt="Commercial truck, tractor, and construction equipment representing surplus assets for review" />
-          </div>
 
-          <div class="hero-card">
-            <h3>Good fit examples</h3>
-            <p style="color:#64748b;">We review individual items and bulk lots.</p>
-            <ul class="mini-list">
-              <li>Fleet vehicles being retired or replaced</li>
-              <li>Farm equipment, tractors, and implements</li>
-              <li>Contractor equipment, trailers, and machines</li>
-              <li>Warehouse, shop, and business surplus assets</li>
-            </ul>
 
-            <div class="stat-row">
-              <div class="stat">
-                <strong>192+</strong>
-                <span>Items accepted for review</span>
-              </div>
-              <div class="stat">
-                <strong>Free</strong>
-                <span>No-obligation submission</span>
-              </div>
+      </div>
+    </section>
+
+    <section class="fit-section">
+      <div class="container">
+        <div class="hero-card">
+          <h3>Good fit examples</h3>
+          <p style="color:#64748b;">We review individual items and bulk lots.</p>
+          <ul class="mini-list">
+            <li>Fleet vehicles being retired or replaced</li>
+            <li>Farm equipment, tractors, and implements</li>
+            <li>Contractor equipment, trailers, and machines</li>
+            <li>Warehouse, shop, and business surplus assets</li>
+          </ul>
+
+          <div class="stat-row">
+            <div class="stat">
+              <strong>192+</strong>
+              <span>Items accepted for review</span>
+            </div>
+            <div class="stat">
+              <strong>Free</strong>
+              <span>No-obligation submission</span>
             </div>
           </div>
         </div>
@@ -779,7 +775,7 @@
              2. Replace the action URL below with your Formspree endpoint.
              3. Set the notification recipient inside Formspree to the company review email: leads@example.com
         -->
-        <form action="https://formspree.io/f/xwvdjowv" method="POST">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <input type="hidden" name="_subject" value="New Equipment Lead Submission - Asset Exit Network" />
 
           <div class="form-grid">
