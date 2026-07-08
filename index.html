@@ -416,23 +416,13 @@
       font-weight: 900;
     }
 
-    /* --- CLEAN DYNAMIC IFRAME LAYOUT WITHOUT HEIGHT LOCKS --- */
     .iframe-container {
       width: 100%;
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 12px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Target standard Jotform generated scripts to eliminate structural padding blockades */
-    .jotform-embed,
-    .form-all {
-      margin-bottom: 0 !important;
-      padding-bottom: 0 !important;
+      padding: 10px;
     }
 
     .hero-proof {
@@ -452,4 +442,401 @@
       border-radius: 999px;
       background: rgba(15, 23, 42, 0.58);
       backdrop-filter: blur(8px);
-      box-shadow:
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-proof strong {
+      color: var(--white);
+      font-size: 0.88rem;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .hero-proof span {
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .hero-proof div::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.8);
+      flex: 0 0 auto;
+    }
+
+    .fit-section {
+      background: #f8fafc;
+      padding: 0 0 34px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .fit-section .hero-card {
+      max-width: 900px;
+      margin: -48px auto 0;
+      position: relative;
+      z-index: 5;
+    }
+
+    .trust {
+      background: #f1f5f9;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust-box {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .trust-box h2 {
+      font-size: 2rem;
+      letter-spacing: -0.045em;
+      margin-bottom: 10px;
+    }
+
+    .trust-box p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: var(--bg);
+      color: #cbd5e1;
+      padding: 32px 0;
+      font-size: 0.92rem;
+    }
+
+    footer .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height: auto;
+        padding: 64px 0 88px;
+        background-position: 68% center;
+      }
+
+      .hero-grid {
+        max-width: 100%;
+      }
+
+      .hero-proof {
+        gap: 8px;
+      }
+
+      .hero-proof div {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-proof span {
+        white-space: normal;
+      }
+
+      .fit-section .hero-card {
+        margin-top: -36px;
+      }
+
+      .hero-grid,
+      .lead-form-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .asset-grid,
+      .step-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-info {
+        position: static;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .nav-cta {
+        display: none;
+      }
+
+      .asset-grid,
+      .step-grid,
+      .stat-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 52px 0 66px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <div class="brand-logo">
+          <img src="logo.png" alt="Asset Exit Network logo" onerror="this.style.display='none'; this.parentElement.textContent='AEN';" />
+        </div>
+        <span>Asset Exit Network</span>
+      </a>
+
+      <a class="nav-cta" href="#submit">Submit Equipment</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="badge"><span></span> Equipment, fleet, and surplus asset review</div>
+          <h1>Sell unused trucks, trailers, and equipment faster.</h1>
+          <p>
+            Have equipment sitting around your yard, shop, farm, or warehouse?
+            Submit the details and our review team will check whether it may be a fit
+            for resale, consignment, auction, or buyer-network options.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#submit">Submit Equipment for Review</a>
+            <a class="btn btn-secondary" href="#how">How It Works</a>
+          </div>
+          <div class="hero-proof" aria-label="Asset Exit Network process highlights">
+            <div><strong>Free review</strong><span>No obligation</span></div>
+            <div><strong>Bulk lots</strong><span>One asset or many</span></div>
+            <div><strong>Fast follow-up</strong><span>Clear next steps</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fit-section">
+      <div class="container">
+        <div class="hero-card">
+          <h3>Good fit examples</h3>
+          <p style="color:#64748b;">We review individual items and bulk lots.</p>
+          <ul class="mini-list">
+            <li>Fleet vehicles being retired or replaced</li>
+            <li>Farm equipment, tractors, and implements</li>
+            <li>Contractor equipment, trailers, and machines</li>
+            <li>Warehouse, shop, and business surplus assets</li>
+          </ul>
+
+          <div class="stat-row">
+            <div class="stat">
+              <strong>192+</strong>
+              <span>Items accepted for review</span>
+            </div>
+            <div class="stat">
+              <strong>Free</strong>
+              <span>No-obligation submission</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="assets">
+      <div class="container">
+        <div class="section-title">
+          <h2>What can be submitted?</h2>
+          <p>
+            If it is commercial, fleet, farm, contractor, or surplus equipment,
+            it may be worth reviewing.
+          </p>
+        </div>
+
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="icon">🚚</div>
+            <h3>Semi & Box Trucks</h3>
+            <p>Running, non-running, retired fleet units, and commercial trucks.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">🛻</div>
+            <h3>Trailers</h3>
+            <p>Equipment trailers, dump trailers, dry vans, utility trailers, and more.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">🚜</div>
+            <h3>Farm Equipment</h3>
+            <p>Tractors, implements, attachments, mowers, and farm asset packages.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">🏗️</div>
+            <h3>Construction Equipment</h3>
+            <p>Skid steers, excavators, lifts, loaders, tools, and contractor assets.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">🏭</div>
+            <h3>Warehouse Surplus</h3>
+            <p>Racking, pallet jacks, forklifts, shop equipment, and business surplus.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">🔧</div>
+            <h3>Tools & Shop Assets</h3>
+            <p>Mechanic tools, compressors, welders, generators, and shop equipment.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">📦</div>
+            <h3>Bulk Lots</h3>
+            <p>Multiple assets from downsizing, retirement, cleanouts, or liquidation.</p>
+          </div>
+
+          <div class="asset-card">
+            <div class="icon">📍</div>
+            <h3>Texas & Nearby Areas</h3>
+            <p>Submit your location and asset details so the team can review fit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="how">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Consignment & Listing Process</h2>
+          <p>How we market, transition, and transfer your assets to verified buyers safely.</p>
+        </div>
+
+        <div class="step-grid">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Submit & Review</h3>
+            <p>Provide asset data, images, and title status via our intake application for evaluation.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Global Advertising</h3>
+            <p>Accepted machinery is detailed and targeted to premium international networks and targeted buyer desks.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Secure Transaction</h3>
+            <p>Invoices are cleared and dynamic settlement wire transactions are verified securely before release approvals.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Transport Logistics</h3>
+            <p>Buyers assume responsibility for freight pickups. No asset leaves the yard until you are paid in full.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="submit">
+      <div class="container lead-form-wrap">
+        <div class="form-info">
+          <h2>Submit your equipment for review</h2>
+          <p>
+            Fill out our official seller application. Provide as much detail as possible so our equipment experts can review your assets quickly.
+          </p>
+
+          <ul class="check-list">
+            <li>Trucks, trailers, tractors, and fleet assets</li>
+            <li>Single items or multiple-item packages</li>
+            <li>Running, non-running, used, retired, or surplus</li>
+            <li>Secure processing & fast turnaround</li>
+          </ul>
+        </div>
+
+        <div class="iframe-container">
+          <iframe
+            id="JotFormIFrame-261828002758056"
+            title="Equipment Seller Form"
+            onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen"
+            src="https://form.jotform.com/261828002758056?utm_id=97757_v0_s00_e0_tv0&fbclid=IwY2xjawS7XmxleHRuA2FlbQIxMABicmlkETFoS0xIbGk1QWNLeGNLWk90c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHssWzvC3pWQCRXb_Ykk633VMqSGc6WzxonH6gs-E_NyFeMPqptlqc13zopOY_aem_mxsLfB2ExYSZfHZlDNpmWQ"
+            frameborder="0"
+            style="min-width: 100%; max-width: 100%; height: 820px; border: none;"
+            scrolling="yes">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <div class="trust-box">
+          <h2>You stay in control.</h2>
+          <p>
+            Asset Exit Network helps review surplus equipment for possible selling options.
+            We do not guarantee a sale or require you to move forward. If the asset appears
+            to be a fit, the review team may contact you for more information.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>Asset Exit Network</strong> — Surplus equipment review</div>
+      <div>© 2026 Asset Exit Network. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.data && typeof event.data === 'string' && (event.data.includes('WebFormSubmit') || event.data.includes('sentSubmit'))) {
+        
+        console.log("Jotform submission detected. Dispatching notification to Formspree...");
+
+        fetch("https://formspree.io/f/xwvdjowv", {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            subject: "New Asset Exit Network Lead - Application Submitted",
+            message: "Notification: A user has completed the AEC Equipment Seller Application on your website.",
+            recipient: "jbstog24@gmail.com",
+            timestamp: new Date().toLocaleString()
+          })
+        })
+        .then(function(response) {
+          if (response.ok) {
+            console.log("Notification email successfully triggered.");
+          }
+        })
+        .catch(function(error) {
+          console.error("Notification dispatch error:", error);
+        });
+      }
+    }, false);
+  </script>
+</body>
+</html>
